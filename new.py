@@ -66,7 +66,7 @@ def req1():
   print (send_sentence)
   c_sock = socket(AF_INET, SOCK_STREAM)
   c_sock.connect((HOST,PORT))
-  c_sock.send(send_sentence.encode('utf-8'))
+  c_sock.send(send_sentence.encode('utf-8')) #소켓이 null인지 아닌지,send문제ㅐ인지 확인
   sentence = c_sock.recv(BUF_SIZE)
   time.sleep(3)
   print (sentence)
